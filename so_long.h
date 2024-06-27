@@ -6,7 +6,7 @@
 /*   By: nhuang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 15:12:22 by nhuang            #+#    #+#             */
-/*   Updated: 2024/06/26 22:01:19 by nhuang           ###   ########.fr       */
+/*   Updated: 2024/06/27 14:51:22 by nhuang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@
 # include <unistd.h>
 # include <stdio.h>
 # include "minilibx/mlx.h"
+# include "get_next_line/get_next_line.h"
+# include "printf/ft_printf.h"
+
 
 typedef	struct s_game
 {
