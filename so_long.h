@@ -6,7 +6,7 @@
 /*   By: nhuang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 15:12:22 by nhuang            #+#    #+#             */
-/*   Updated: 2024/06/27 14:51:22 by nhuang           ###   ########.fr       */
+/*   Updated: 2024/06/27 17:27:41 by nhuang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,5 +44,8 @@ typedef	struct s_game
 	void	*floor;
 }			t_game;
 
+void exit_game(t_game *game);
+int handle_key(int keycode, t_game *game);
+void exit_game(t_game *game);
 
 #endif
