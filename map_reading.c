@@ -6,7 +6,7 @@
 /*   By: nhuang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 20:57:54 by nhuang            #+#    #+#             */
-/*   Updated: 2024/06/28 12:18:19 by nhuang           ###   ########.fr       */
+/*   Updated: 2024/06/28 12:43:27 by nhuang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ int count_height(t_game *game, char **argv)
 	if (!game->fd)
 		ft_printf("fd not opening.\n");
 	temp = get_next_line(game->fd);
+	if (!(game->width = ft_strlen(temp)))
+		ft_printf("width counts error");
 	while(temp)
 	{
 		game->height++;
@@ -31,7 +33,7 @@ int count_height(t_game *game, char **argv)
 	close(game->fd);
 }
 
-int count_width(t_game *game, )
+char **copy_map
 
 int map_load(t_game *game, char **argv)
 {
