@@ -6,7 +6,7 @@
 /*   By: nhuang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 20:57:54 by nhuang            #+#    #+#             */
-/*   Updated: 2024/06/28 12:43:27 by nhuang           ###   ########.fr       */
+/*   Updated: 2024/06/28 16:49:38 by nhuang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,16 @@ int count_height(t_game *game, char **argv)
 	close(game->fd);
 }
 
-char **copy_map
+char **read_map(t_game *game, char **argv)
+{
+	int		i;
+	char 	**map;
+
+	game->fd = open(argv[1], O_RDONLY);
+	if (!game->fd)
+		ft_printf("fd not opening.\n");
+	
+}
 
 int map_load(t_game *game, char **argv)
 {
