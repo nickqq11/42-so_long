@@ -6,7 +6,7 @@
 /*   By: nhuang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 15:06:16 by nhuang            #+#    #+#             */
-/*   Updated: 2024/06/27 18:50:38 by nhuang           ###   ########.fr       */
+/*   Updated: 2024/06/28 11:13:12 by nhuang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ int main(int argc, char **argv)
 
 	if(argc != 2)
 		return (ft_printf("please load .ber map file\n"));
+	check_all(argv);
 	game_start(&game);
 	map_load(&game, argv);
 	mlx_key_hook(game.win_ptr, handle_key, &game);
