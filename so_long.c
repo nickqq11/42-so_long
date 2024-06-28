@@ -6,7 +6,7 @@
 /*   By: nhuang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 15:06:16 by nhuang            #+#    #+#             */
-/*   Updated: 2024/06/28 11:13:12 by nhuang           ###   ########.fr       */
+/*   Updated: 2024/06/28 21:58:35 by nhuang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,17 @@
 	
 // }
 
-void exit_game(t_game *game)
+int exit_game(t_game *game)
 {
 	if (game->win_ptr)
 		mlx_destroy_window(game->mlx_ptr, game->win_ptr);
 	if (game->mlx_ptr)
 		free(game->mlx_ptr);
+	if (game->move_count > 0)
+	{
 	ft_printf("Game exited, memory freed.\n");
 	exit(EXIT_SUCCESS);
+	}
 }
 
 void game_start(t_game *game)
