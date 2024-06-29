@@ -6,7 +6,7 @@
 /*   By: nhuang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 15:12:22 by nhuang            #+#    #+#             */
-/*   Updated: 2024/06/28 20:09:04 by nhuang           ###   ########.fr       */
+/*   Updated: 2024/06/29 23:03:52 by nhuang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,7 @@
 # include "printf/ft_printf.h"
 # include "libft/libft.h"
 
-
-typedef	struct s_game
+typedef struct s_game
 {
 	int		fd;
 	int		width;
@@ -47,10 +46,13 @@ typedef	struct s_game
 	void	*floor;
 }			t_game;
 
-int handle_key(int keycode, t_game *game);
-int exit_game(t_game *game);
-int check_all(char **argv);
-int check_ber(char **argv);
-int map_load(t_game *game, char **argv);
+int		handle_key(int keycode, t_game *game);
+int		exit_game(t_game *game);
+int		check_all(t_game *game, char **argv);
+int		check_ber(char **argv);
+int		map_load(t_game *game, char **argv);
+void	check_sprite(t_game *game, char *str, int y);
+void	ft_terminate(t_game *game, char *msg);
+void	check_route(t_game *game, char **map_copy, int x, int y);
 
 #endif

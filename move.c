@@ -6,13 +6,13 @@
 /*   By: nhuang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 20:58:56 by nhuang            #+#    #+#             */
-/*   Updated: 2024/06/27 17:26:17 by nhuang           ###   ########.fr       */
+/*   Updated: 2024/06/29 20:30:21 by nhuang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-int handle_key(int keycode, t_game *game)
+int	handle_key(int keycode, t_game *game)
 {
 	if (keycode == 53)
 		exit_game(game);
